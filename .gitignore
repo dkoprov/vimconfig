@@ -1,0 +1,6 @@
+.VimballRecord
+tags
+*~
+*.swp
+tmp
+.DS_Store
