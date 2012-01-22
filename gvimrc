@@ -3,6 +3,9 @@ if has("gui_macvim")
 
   set guifont=Menlo:h16
   set anti
+     
+  "set background=light
+  color freya
 
   " Debugger settings
   let g:ruby_debugger_progname = 'mvim'
@@ -44,9 +47,6 @@ set visualbell
 " Start without the toolbar
 set guioptions-=T
 
-" Default gui color scheme
-"set background=light
-color freya
 
 " Include user's local vim config
 if filereadable(expand("~/.gvimrc.local"))

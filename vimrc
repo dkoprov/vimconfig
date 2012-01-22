@@ -1,4 +1,5 @@
 set nocompatible
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -12,11 +13,15 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l,col=%c%V,totlin=%L%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set laststatus=2  " Always show status line.
 
-" line numbers
+" Line numbers
 set number 
 
-set hlsearch  " highlight search matches...
-set incsearch " ...as you type
+" Set solarized dark color for terminal vim
+color jellybeans
+
+" Search settings
+set hlsearch
+set incsearch
 set ignorecase
 set smartcase
 
@@ -24,8 +29,8 @@ set visualbell
 set mousehide
 set cf  " Enable error files & error jumping.
 set autowrite  " Writes on make/shell commands
-set ruler  " Ruler on
-set nowrap  " Line wrapping off
+set ruler
+set nowrap
 
 set timeoutlen=100
 set history=1000
@@ -41,7 +46,7 @@ set smarttab
 set shiftwidth=2
 set autoindent
 set expandtab
-"set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\ \ ,trail:·
 
 set backspace=start,indent,eol
 autocmd FileType make set noexpandtab
@@ -80,8 +85,8 @@ let g:ruby_debugger_spec_path = '$GEM_HOME/bin/spec'
 let g:ruby_debugger_cucumber_path = '$GEM_HOME/bin/cucumber'
 
 " ,c to show hidden characters
-set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>c :set nolist!<CR>
+"set listchars=tab:>-,trail:·,eol:$
+"nmap <silent> <leader>c :set nolist!<CR>
 
 " Highlight trailing whitespace
 highlight RedundantSpaces term=standout ctermbg=red guibg=red
@@ -93,18 +98,18 @@ map <silent> <leader>h :set hls!<CR>
 " ,w to toggle line wrap
 map <silent> <Leader>w :set wrap!<CR>
 
-" ,f to find current file in NERDTree
-map <silent> <Leader>f :NERDTreeFind<CR>
-
 " ,u to toggle undo history browser
 map <Leader>u :GundoToggle<CR>
 
+" ,m toggle NERDTree
 map <silent> <Leader>m :NERDTreeToggle<CR>
+
+" ,f to find current file in NERDTree
+map <silent> <Leader>f :NERDTreeFind<CR>
+
 
 " BufExplorer
 map <silent> <unique> <Leader>. :BufExplorerHorizontalSplit<CR>
-
-map <silent> <Leader>s :setlocal spell! spelllang=en_gb<CR>
 
 " Kwbd configuration
 map <Leader>w :Kwbd<CR>
@@ -255,9 +260,6 @@ endfunction
 " ZoomWin configuration
 map <Leader>z :ZoomWin<CR>
 
-" make Y consistent with C and D
-map Y y$
-
 " strip trailing whitespace<foo&bar>
 function! StripTrailingWhitespace()
 	normal mz
@@ -272,37 +274,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
 let g:syntastic_auto_loc_list=1
 
-" Alternatives to ESC: *******************************************************
-imap jj <ESC>
-imap kk <ESC>
-
-map <Leader>rt :!run_tags<CR><CR>
-
-function! OpenInBrowser(url)
-  if has("mac")
-    exec '!open '.a:url
-  else
-    exec '!firefox -new-tab '.a:url.' &'
-  endif
-endfunction
-
-" Open the Ruby ApiDock page for the word under cursor
-function! OpenRubyDoc(keyword)
-  let url = 'http://railsapi.com/doc/ruby-v1.8/?q='.a:keyword
-  call OpenInBrowser(url)
-endfunction
-noremap RB :call OpenRubyDoc(expand('<cword>'))<CR><CR>
-
-" Open the Rails ApiDock page for the word under cursor
-function! OpenRailsDoc(keyword)
-  if filereadable('config/application.rb')
-    let url = 'http://railsapi.com/doc/rails-v3.0.4/?q='.a:keyword
-  else
-    let url = 'http://railsapi.com/doc/rails-v2.3.8/?q='.a:keyword
-  endif
-  call OpenInBrowser(url)
-endfunction
-noremap RR :call OpenRailsDoc(expand('<cword>'))<CR><CR>
+" Alternatives to ESC
+inoremap jjj <ESC>
+inoremap kkk <ESC>
 
 " Align =>
 vnoremap <silent> <Leader>t> :Align =><CR>
