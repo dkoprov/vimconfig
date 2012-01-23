@@ -1,14 +1,25 @@
 # Installation
 
-If necessary, backup and remove your <tt>~/.vim</tt> directory and
-<tt>~/.vimrc</tt> file.
+If necessary, backup <tt>~/.vim</tt> directory to i.e. <tt>~/.vim-old</tt> and
+<tt>git clone git@github.com:dkoprov/vimconfig.git</tt>
+Don't forget to change the nikname to yours in the line above.
+I prefer to keep all git repositories in one place, i.e. in /projects directory, so
+I created a symlink to this repository:
 
+    ln -sF ~/projects/github/vimconfig ~/.vim
+But you may do what you prefer. Some people clone repository right into ~/.vim directory. It's up to you.
+Then <tt>git pull</tt> but since git submodules is used here, you also need to <tt>git submodule init</tt>
+and <tt>git submodule update</tt>
+
+After all have updated, link your vimrc and gvimrc files.
 <tt>.vimrc</tt>:
 
     ln -s ~/.vim/vimrc ~/.vimrc
 <tt>.gvimrc</tt>:
 
     ln -s ~/.vim/gvimrc ~/.gvimrc
+
+You're ready to go!
 
 # Included Plugins
 
