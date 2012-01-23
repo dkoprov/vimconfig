@@ -1,7 +1,8 @@
 # Installation
 
 If necessary, backup <tt>~/.vim</tt> directory to i.e. <tt>~/.vim-old</tt> and
-<tt>git clone git@github.com:dkoprov/vimconfig.git</tt>
+
+    git clone git://github.com/dkoprov/vimconfig.git
 Don't forget to change the nikname to yours in the line above.
 I prefer to keep all git repositories in one place, i.e. in /projects directory, so
 I created a symlink to this repository:
