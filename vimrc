@@ -6,6 +6,11 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+" Current line highlight
+set cursorline
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
 " Set encoding
 set encoding=utf-8
 
@@ -32,7 +37,7 @@ set autowrite  " Writes on make/shell commands
 set ruler
 set nowrap
 
-set timeoutlen=100
+set timeoutlen=500
 set history=1000
 
 " Tab completion
@@ -102,7 +107,7 @@ map <silent> <Leader>w :set wrap!<CR>
 map <Leader>u :GundoToggle<CR>
 
 " ,m toggle NERDTree
-map <silent> <Leader>m :NERDTreeToggle<CR>
+map <silent> <Leader><Leader> :NERDTreeToggle<CR>
 
 " ,f to find current file in NERDTree
 map <silent> <Leader>f :NERDTreeFind<CR>

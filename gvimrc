@@ -3,9 +3,9 @@ if has("gui_macvim")
 
   set guifont=Menlo:h16
   set anti
-     
-  "set background=light
-  color freya
+
+  set background=light
+  color sweyla_g_dark
 
   " Debugger settings
   let g:ruby_debugger_progname = 'mvim'
@@ -27,14 +27,14 @@ if has("gui_macvim")
   vmap <D-[> <gv
 
   " Command-Option-ArrowKey to switch viewports
-  map <D-M-Up> <C-w>k
-  imap <D-M-Up> <Esc> <C-w>k
-  map <D-M-Down> <C-w>j
-  imap <D-M-Down> <Esc> <C-w>j
-  map <D-M-Right> <C-w>l
-  imap <D-M-Right> <Esc> <C-w>l
-  map <D-M-Left> <C-w>h
-  imap <D-M-Left> <C-w>h
+  map <S-D-Up> <C-w>k
+  imap <S-D-Up> <Esc> <C-w>k
+  map <S-D-Down> <C-w>j
+  imap <S-D-Down> <Esc> <C-w>j
+  map <S-D-Right> <C-w>l
+  imap <S-D-Right> <Esc> <C-w>l
+  map <S-D-Left> <C-w>h
+  imap <S-D-Left> <C-w>h
 
   " Adjust viewports to the same size
   map <Leader>= <C-w>=
