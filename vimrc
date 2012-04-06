@@ -61,6 +61,15 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set f
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
+" javaScript autocomplition
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+" ruby autocompletion
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
 " gist-vim defaults
 if has("mac")
   let g:gist_clip_command = 'pbcopy'

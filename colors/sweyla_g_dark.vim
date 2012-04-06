@@ -16,8 +16,8 @@ if version >= 700
   hi CursorLine     guibg=#003D4D ctermbg=16
   hi CursorColumn   guibg=#003D4D ctermbg=16
   hi MatchParen     guifg=#33CAC2 guibg=#002832 gui=bold ctermfg=79 ctermbg=16 cterm=bold
-  hi Pmenu          guifg=#EEE8D7 guibg=#323232 ctermfg=255 ctermbg=236
-  hi PmenuSel       guifg=#EEE8D7 guibg=#36A3FF ctermfg=255 ctermbg=75
+  hi Pmenu          guifg=#EEE8D7 guibg=#003D4D ctermfg=255 ctermbg=236
+  hi PmenuSel       guifg=#003D4D guibg=#EEE8D7 ctermfg=255 ctermbg=75
 endif
 
 " Background and menu colors
