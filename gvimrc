@@ -5,7 +5,7 @@ if has("gui_macvim")
   set anti
 
   set background=light
-  color sweyla_g_dark
+  color spike
 
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>

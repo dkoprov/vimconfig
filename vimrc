@@ -8,6 +8,7 @@ syntax on
 
 " Current line highlight
 set cursorline
+highlight CursorLine cterm=NONE ctermbg=black
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
@@ -21,7 +22,6 @@ set laststatus=2  " Always show status line.
 " Line numbers
 set number 
 
-" Set solarized dark color for terminal vim
 color jellybeans
 
 " Search settings
@@ -70,15 +70,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
-" gist-vim defaults
-if has("mac")
-  let g:gist_clip_command = 'pbcopy'
-elseif has("unix")
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
 
@@ -93,14 +84,6 @@ set noswapfile
 " NERDTree hidden files filter
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '\.DS_Store', '\.sass-cache', '\.svn', '\.idea', '\.gitkeep']
 let NERDTreeShowHidden = 1
-
-" RVM options for ruby debugger
-let g:ruby_debugger_spec_path = '$GEM_HOME/bin/spec'
-let g:ruby_debugger_cucumber_path = '$GEM_HOME/bin/cucumber'
-
-" ,c to show hidden characters
-"set listchars=tab:>-,trail:·,eol:$
-"nmap <silent> <leader>c :set nolist!<CR>
 
 " Highlight trailing whitespace
 highlight RedundantSpaces term=standout ctermbg=red guibg=red
@@ -121,22 +104,9 @@ map <silent> <Leader><Leader> :NERDTreeToggle<CR>
 " ,f to find current file in NERDTree
 map <silent> <Leader>f :NERDTreeFind<CR>
 
-" Command-Shift-F for Ack
-map <D-F> :Ack<space>
-
 " Command-/ to toggle comments
-map <D-/> <plug>NERDCommenterToggle<CR>
-imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
-
-" Command-Option-ArrowKey to switch viewports
-map <S-D-Up> <C-w>k
-imap <S-D-Up> <Esc> <C-w>k
-map <S-D-Down> <C-w>j
-imap <S-D-Down> <Esc> <C-w>j
-map <S-D-Right> <C-w>l
-imap <S-D-Right> <Esc> <C-w>l
-map <S-D-Left> <C-w>h
-imap <S-D-Left> <C-w>h
+map <Leader>/  <plug>NERDCommenterToggle<CR>
+imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 
 
 " BufExplorer
@@ -287,6 +257,13 @@ endfunction
 
 " ZoomWin configuration
 map <Leader>z :ZoomWin<CR>
+
+" fugutive status
+map <Leader>ss :Gstatus<CR>
+" fugititve commit
+map <Leader>cc :Gcommit<CR>
+" fugitive commit --amend
+map <Leader>acc :Gcommit --amend<CR>
 
 " strip trailing whitespace<foo&bar>
 function! StripTrailingWhitespace()
