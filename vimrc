@@ -104,11 +104,6 @@ map <silent> <Leader><Leader> :NERDTreeToggle<CR>
 " ,f to find current file in NERDTree
 map <silent> <Leader>f :NERDTreeFind<CR>
 
-" Command-/ to toggle comments
-map <Leader>/  <plug>NERDCommenterToggle<CR>
-imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
-
-
 " BufExplorer
 map <silent> <unique> <Leader>. :BufExplorerHorizontalSplit<CR>
 
@@ -259,9 +254,9 @@ endfunction
 map <Leader>z :ZoomWin<CR>
 
 " fugutive status
-map <Leader>ss :Gstatus<CR>
+map <Leader>fs :Gstatus<CR>
 " fugititve commit
-map <Leader>cc :Gcommit<CR>
+map <Leader>fc :Gcommit<CR>
 " fugitive commit --amend
 map <Leader>acc :Gcommit --amend<CR>
 
