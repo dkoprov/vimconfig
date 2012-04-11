@@ -121,6 +121,23 @@ map <silent> <Leader><Leader> :NERDTreeToggle<CR>
 " ,f to find current file in NERDTree
 map <silent> <Leader>f :NERDTreeFind<CR>
 
+" Command-Shift-F for Ack
+map <D-F> :Ack<space>
+
+" Command-/ to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
+imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+
+" Command-Option-ArrowKey to switch viewports
+map <S-D-Up> <C-w>k
+imap <S-D-Up> <Esc> <C-w>k
+map <S-D-Down> <C-w>j
+imap <S-D-Down> <Esc> <C-w>j
+map <S-D-Right> <C-w>l
+imap <S-D-Right> <Esc> <C-w>l
+map <S-D-Left> <C-w>h
+imap <S-D-Left> <C-w>h
+
 
 " BufExplorer
 map <silent> <unique> <Leader>. :BufExplorerHorizontalSplit<CR>
@@ -252,9 +269,6 @@ call s:DefineCommand("rm", "Remove")
 " end of the NERDTree configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Tabular
-vnoremap <silent> <Leader>tt :call Tabularize('/\|/')<CR>
-
 " Folding settings
 set foldmethod=indent "fold based on indent
 set foldnestmax=3     "deepest fold is 3 levels
@@ -291,9 +305,6 @@ let g:syntastic_auto_loc_list=1
 " Alternatives to ESC
 inoremap jjj <ESC>
 inoremap kkk <ESC>
-
-" Align =>
-vnoremap <silent> <Leader>t> :Align =><CR>
 
 " It's not like :W is bound to anything anyway.
 command! W :w

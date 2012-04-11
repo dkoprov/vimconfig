@@ -7,11 +7,6 @@ if has("gui_macvim")
   set background=light
   color sweyla_g_dark
 
-  " Debugger settings
-  let g:ruby_debugger_progname = 'mvim'
-  map <Leader>dg :Rdebugger<CR>
-  map <Leader>dr :RdbTest<CR>
-
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
@@ -21,10 +16,6 @@ if has("gui_macvim")
   " Command-/ to toggle comments
   map <D-/> <plug>NERDCommenterToggle<CR>
   imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
-
-  " Command-][ to increase/decrease indentation
-  vmap <D-]> >gv
-  vmap <D-[> <gv
 
   " Command-Option-ArrowKey to switch viewports
   map <S-D-Up> <C-w>k
