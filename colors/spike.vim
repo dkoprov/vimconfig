@@ -25,8 +25,8 @@ hi Cursor           guifg=NONE guibg=#EEE8D7 ctermbg=255 gui=none
 hi Normal           guifg=#EEE8D7 guibg=#002832 gui=none ctermfg=255 ctermbg=16 cterm=none
 hi NonText          guifg=#EEE8D7 guibg=#002832 gui=none ctermfg=255 ctermbg=233 cterm=none
 hi LineNr           guifg=#00353F guibg=#002832 gui=none ctermfg=255 ctermbg=234 cterm=none
-hi StatusLine       guifg=#EEE8D7 guibg=#0A2036 gui=italic ctermfg=255 ctermbg=234 cterm=italic
-hi StatusLineNC     guifg=#EEE8D7 guibg=#28282C gui=none ctermfg=255 ctermbg=235 cterm=none
+hi StatusLine       guifg=#EEE8D7 guibg=#0C504E gui=italic ctermfg=255 ctermbg=234 cterm=italic
+hi StatusLineNC     guifg=#EEE8D7 guibg=#400F10 gui=none ctermfg=255 ctermbg=235 cterm=none
 hi Directory        guifg=#1B87CC guibg=#0A2036 gui=none ctermfg=255 ctermbg=234 cterm=none
 hi VertSplit        guifg=#EEE8D7 guibg=#19191D gui=none ctermfg=255 ctermbg=234 cterm=none
 hi Folded           guifg=#EEE8D7 guibg=#002832 gui=none ctermfg=255 ctermbg=16 cterm=none
@@ -64,7 +64,7 @@ hi Type guifg=#249C83 gui=none ctermfg=123 cterm=none
 hi pythonBuiltin guifg=#1B87CC gui=none ctermfg=51 cterm=none
 hi TabLineFill guifg=#063768 gui=none ctermfg=23 cterm=none
 hi Todo guifg=#FA0089 guibg=#002832 gui=none ctermfg=23 cterm=none
-hi Error guifg=#EEE8D7 guibg=#DE3035 gui=none ctermfg=51 cterm=none
+hi Error guifg=#EEE8D7 guibg=#972325 gui=none ctermfg=51 cterm=none
 
 " ruby highlighting "{{{
 " ----------------------------------------------------------------------
