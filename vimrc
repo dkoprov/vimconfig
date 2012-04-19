@@ -20,9 +20,12 @@ set statusline=%<%f\ %h%m%r%=%-20.(line=%l,col=%c%V,totlin=%L%)\%h%m%r%=%-40(,%n
 set laststatus=2  " Always show status line.
 
 " Line numbers
-set number 
+set number
 
-color jellybeans
+" strange hack to set pretty colors. Have n't figured it up.
+set background=dark
+color spike
+color Tomorrow-Night
 
 " Search settings
 set hlsearch

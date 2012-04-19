@@ -1,11 +1,11 @@
 if has("gui_macvim")
   set fuoptions=maxhorz,maxvert
 
-  set guifont=Menlo:h16
+  set guifont=Menlo:h15
   set anti
 
-  set background=light
-  color spike
+  "set background=light
+  color Tomorrow-Night-Eighties
 
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
