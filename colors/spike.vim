@@ -63,7 +63,7 @@ hi String guifg=#859831 gui=none ctermfg=33 cterm=none
 hi Type guifg=#249C83 gui=none ctermfg=123 cterm=none
 hi pythonBuiltin guifg=#1B87CC gui=none ctermfg=51 cterm=none
 hi TabLineFill guifg=#063768 gui=none ctermfg=23 cterm=none
-hi Todo guifg=#FA0089 guibg=#002832 gui=none ctermfg=23 cterm=none
+hi Todo guifg=#FA0089 guibg=#002832 gui=none ctermfg=13 cterm=none
 hi Error guifg=#EEE8D7 guibg=#972325 gui=none ctermfg=51 cterm=none
 
 " ruby highlighting "{{{

@@ -15,6 +15,9 @@ autocmd WinLeave * setlocal nocursorline
 " Enabling mouse
 set mouse=a
 
+" Enabling clipboard
+set clipboard=unnamed
+
 " Set encoding
 set encoding=utf-8
 
@@ -25,7 +28,6 @@ set laststatus=2  " Always show status line.
 " Line numbers
 set number
 
-" strange hack to set pretty colors. Have n't figured it up.
 set background=dark
 color spike
 color Tomorrow-Night
@@ -100,15 +102,6 @@ map <silent> <leader>h :set hls!<CR>
 
 " ,w to toggle line wrap
 map <silent> <Leader>w :set wrap!<CR>
-
-" ,u to toggle undo history browser
-map <Leader>u :GundoToggle<CR>
-
-" ,m toggle NERDTree
-map <silent> <Leader><Leader> :NERDTreeToggle<CR>
-
-" ,f to find current file in NERDTree
-map <silent> <Leader>f :NERDTreeFind<CR>
 
 " BufExplorer
 map <silent> <unique> <Leader>. :BufExplorerHorizontalSplit<CR>
@@ -304,12 +297,18 @@ map !P :call PushToSpin("")
 " ZoomWin configuration
 map <Leader>z :ZoomWin<CR>
 
+" NERDTreeToggle
+map <Leader><Leader> :NERDTreeToggle<CR>
+
 " fugutive status
 map <Leader>fs :Gstatus<CR>
 " fugititve commit
 map <Leader>fc :Gcommit<CR>
 " fugitive commit --amend
 map <Leader>acc :Gcommit --amend<CR>
+
+" Switch on/off automatic code alignin on paste
+set pastetoggle=<F2>
 
 " strip trailing whitespace<foo&bar>
 function! StripTrailingWhitespace()
@@ -328,12 +327,9 @@ let g:syntastic_auto_loc_list=1
 " use ,F to jump to tag in a vertical split
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
-" Alternatives to ESC
-inoremap jjj <ESC>
-inoremap kkk <ESC>
-
 " It's not like :W is bound to anything anyway.
 command! W :w
+command! Q :q
 
 " Source a local configuration file if available.
 if filereadable(expand("~/.vimrc.local"))
