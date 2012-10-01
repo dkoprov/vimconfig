@@ -318,8 +318,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
 let g:syntastic_auto_loc_list=1
 
-" use ,F to jump to tag in a vertical split
-nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+" use ,F to jump to tag in a horizontal split
+nnoremap <silent> ,F :let word=expand("<cword>")<CR>:sp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
 " It's not like :W is bound to anything anyway.
 command! W :w
