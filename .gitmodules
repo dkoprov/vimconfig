@@ -67,6 +67,3 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-fakeclip"]
-	path = vim-fakeclip
-	url = git://github.com/kana/vim-fakeclip.git
