@@ -336,10 +336,7 @@ function! SuperCleverTab()
   else
     if &omnifunc != ''
       " omni-completion
-      return "\<C-X>\<C-O>"
-    elseif &dictionary != ''
-      " dictionary completion
-      return "\<C-K>"
+      return "\<C-X>\<C-]>"
     else
       " known-word completion
       return "\<C-N>"
