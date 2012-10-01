@@ -81,10 +81,6 @@ A tree explorer plugin for navigating the filesystem ([more](http://www.vim.org/
   <dt>,f</dt><dd>Show current file in tree</dd>
 </dl>
 
-## nerdcommenter (2.3.0)
-
-A plugin that allows for easy commenting of code for many filetypes ([more](http://www.vim.org/scripts/script.php?script_id=1218))
-
 ## rails (4.3)
 
 Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more ([more](http://www.vim.org/scripts/script.php?script_id=1567))
@@ -94,10 +90,6 @@ Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more ([mo
 <dl>
   <dt>,r</dt><dd>run rake</dd>
 </dl>
-
-## repeat (1.0)
-
-Use the repeat command (.) with supported plugins ([more](http://www.vim.org/scripts/script.php?script_id=2136))
 
 ## ruby (7bee8d0 - 8 August, 2011)
 
@@ -110,10 +102,6 @@ Delete/change/add parentheses/quotes/XML-tags/much more with ease ([more](http:/
 ## syntastic (1.2.0)
 
 Automatic syntax checking ([more](http://www.vim.org/scripts/script.php?script_id=2736))
-
-## unimpaired (1.1)
-
-Pairs of handy bracket maps ([more](http://www.vim.org/scripts/script.php?script_id=1590))
 
 ## ZoomWin (23)
 
