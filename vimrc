@@ -8,9 +8,6 @@ syntax on
 
 " Current line highlight
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=black
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
 
 " Enabling mouse
 set mouse=a
@@ -21,7 +18,6 @@ set clipboard=unnamed
 " Set encoding
 set encoding=utf-8
 
-set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l,col=%c%V,totlin=%L%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set laststatus=2  " Always show status line.
 
@@ -304,8 +300,6 @@ map <Leader><Leader> :NERDTreeToggle<CR>
 map <Leader>fs :Gstatus<CR>
 " fugititve commit
 map <Leader>fc :Gcommit<CR>
-" fugitive commit --amend
-map <Leader>acc :Gcommit --amend<CR>
 
 " Switch on/off automatic code alignin on paste
 set pastetoggle=<F2>
