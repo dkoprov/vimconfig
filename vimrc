@@ -42,7 +42,7 @@ set ruler
 set nowrap
 
 set timeoutlen=500
-set history=1000
+set history=50
 
 " Tab completion
 set wildmode=list:longest,list:full
