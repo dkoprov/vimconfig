@@ -325,6 +325,29 @@ nnoremap <silent> ,F :let word=expand("<cword>")<CR>:sp<CR>:wincmd w<cr>:exec("t
 command! W :w
 command! Q :q
 
+" nice auto-magic tab completion
+function! SuperCleverTab()
+  " check if at beginning of line
+  if col('.') == 1
+    return "\<Tab>"
+  " check if previous character is whitespace
+  elseif strpart( getline('.'), col('.')-2, 1 ) == ' '
+    return "\<Tab>"
+  else
+    if &omnifunc != ''
+      " omni-completion
+      return "\<C-X>\<C-O>"
+    elseif &dictionary != ''
+      " dictionary completion
+      return "\<C-K>"
+    else
+      " known-word completion
+      return "\<C-N>"
+    endif
+  endif
+endfunction
+inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+
 " Source a local configuration file if available.
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
