@@ -102,8 +102,8 @@ map <silent> <Leader>w :set wrap!<CR>
 " BufExplorer
 map <silent> <unique> <Leader>. :BufExplorerHorizontalSplit<CR>
 
-" Kwbd configuration
-map <Leader>w :Kwbd<CR>
+" delete buffer :bd
+map <Leader>w :bd<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " A whole bunch of NERDTree configuration stolen from carlhuda's janus

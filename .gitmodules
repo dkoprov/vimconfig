@@ -49,9 +49,3 @@
 [submodule "bundle/textile"]
 	path = bundle/textile
 	url = git://github.com/timcharper/textile.vim.git
-[submodule "bundle/kwbd"]
-	path = bundle/kwbd
-	url = git://github.com/vexxor/kwbd.vim.git
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
